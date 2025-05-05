@@ -6,9 +6,9 @@ import java.io.*;
 import java.util.Scanner;
 
 
-public class UnitProject {
+public class UnitProjectQuestions {
     public static void main(String[] args) throws java.io.FileNotFoundException {
-        dir = "C:\\Users\\salma\\Desktop\\Java Files\\Unit Project\\";
+        dir = "H:\\Documents - Copy\\GitHub\\survey_GUI\\data\\";
 
         question1_Teacher();
         question6_Student();

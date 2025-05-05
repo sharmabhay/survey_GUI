@@ -1,4 +1,3 @@
-// This question was completed by Salman.
 import javax.swing.*;
 import javax.swing.JLabel;
 import java.awt.event.*;
@@ -9,9 +8,10 @@ import java.awt.Color;
 import java.awt.color.*;
 
 
-public class GradeLevelrecent {
+public class GradeLevelQuestion {
     public static void main(String[] args) {
-        dir = "C:\\Users\\salma\\Desktop\\Java Files\\Unit Project\\";
+        dir = "H:\\Documents - Copy\\GitHub\\survey_GUI\\data\\";
+        H:\Documents - Copy\GitHub\survey_GUI
 
         GradeLevels();
     }

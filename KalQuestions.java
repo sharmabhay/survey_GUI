@@ -13,7 +13,7 @@ public class KalQuestions {
     static int q8no;
 
     public static void main(String[] args) throws IOException {
-        dir = "C:\\Users\\salma\\Desktop\\Java Files\\Unit Project\\";
+        dir = "H:\\Documents - Copy\\GitHub\\survey_GUI\\data\\";
 
         runQuestions(); // method to run questions
     }

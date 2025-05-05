@@ -6,7 +6,7 @@ import java.io.*;
 
 public class GenderQuestionLav {
     public static void main(String[] args) {
-        dir = "C:\\Users\\salma\\Desktop\\Java Files\\Unit Project\\";
+        dir = "H:\\Documents - Copy\\GitHub\\survey_GUI\\data\\";
 
         GenderQuestionMultipleChoice();
     }
