@@ -1,12 +1,13 @@
-//This question was done by Lavleen
 import java.awt.HeadlessException;
 import java.awt.event.*;
 import javax.swing.*;
-
 import java.io.*;
+
 
 public class GenderQuestionLav {
     public static void main(String[] args) {
+        dir = "C:\\Users\\salma\\Desktop\\Java Files\\Unit Project\\";
+
         GenderQuestionMultipleChoice();
     }
 
@@ -51,10 +52,8 @@ public class GenderQuestionLav {
 
         okButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-
                 try {
-                    FileWriter userChoice = new FileWriter(
-                            "C:\\Users\\salma\\Desktop\\Java Files\\Unit Project\\lavQuestion.txt", true);
+                    FileWriter userChoice = new FileWriter(dir + "qn_gender.txt", true);
 
                     PrintWriter userChoicePrinted = new PrintWriter(userChoice);
                     if (male.isSelected()) {
@@ -68,8 +67,7 @@ public class GenderQuestionLav {
                         userChoicePrinted.close();
                     }
 
-                    FileReader oop = new FileReader(
-                            "C:\\Users\\salma\\Desktop\\Java Files\\Unit Project\\lavQuestion.txt");
+                    FileReader oop = new FileReader(dir + "qn_gender.txt");
                     BufferedReader poof = new BufferedReader(oop);
                     int maleCounter = 0;
                     int femaleCounter = 0;
@@ -102,7 +100,7 @@ public class GenderQuestionLav {
                 } catch (FileNotFoundException e1) {
                     e1.printStackTrace();
                 }
-    }
+            }
         });
     }
 }

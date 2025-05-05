@@ -1,12 +1,15 @@
-// these questions were done by Abhay.
+// These questions were completed by Abhay.
 import javax.swing.*;
 import java.awt.event.*;
 import java.awt.*;
 import java.io.*;
 import java.util.Scanner;
 
+
 public class UnitProject {
     public static void main(String[] args) throws java.io.FileNotFoundException {
+        dir = "C:\\Users\\salma\\Desktop\\Java Files\\Unit Project\\";
+
         question1_Teacher();
         question6_Student();
     }
@@ -50,7 +53,7 @@ public class UnitProject {
         button6_s.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 try {
-                    File f6_s = new File("C:\\Users\\salma\\Desktop\\Java Files\\Unit Project\\qn_6_student.txt");
+                    File f6_s = new File(dir + "qn_6_student.txt");
                     Scanner s6_s = new Scanner(f6_s);
                     FileReader fr6_s = new FileReader(f6_s);
                     BufferedReader br6_s = new BufferedReader(fr6_s);
@@ -84,7 +87,7 @@ public class UnitProject {
 
                         if (c == 'A') {
                             aCounter++;
-                        } 
+                        }
                         else if (c == 'B') {
                             bCounter++;
                         }
@@ -102,7 +105,7 @@ public class UnitProject {
                         // Writing text to the file
                         fw6_s.write("A ");
                         fw6_s.close();
-                    } 
+                    }
                     else if (aCounter > 0 && sa) {
                         // Appending text to the file
                         pw6_s.print("A ");
@@ -112,7 +115,7 @@ public class UnitProject {
                         // Writing text to the file
                         fw6_s.write("B ");
                         fw6_s.close();
-                    } 
+                    }
                     else if (bCounter > 0 && a) {
                         // Appending text to the file
                         pw6_s.print("B ");
@@ -122,7 +125,7 @@ public class UnitProject {
                         // Writing text to the file
                         fw6_s.write("C ");
                         fw6_s.close();
-                    } 
+                    }
                     else if (cCounter > 0 && d) {
                         // Appending text to the file
                         pw6_s.print("C ");
@@ -132,13 +135,13 @@ public class UnitProject {
                         // Writing text to the file
                         fw6_s.write("D ");
                         fw6_s.close();
-                    } 
+                    }
                     else if (dCounter > 0 && sd) {
                         // Appending text to the file
                         pw6_s.print("D ");
                         pw6_s.close();
                     }
-                    
+
                     // Reading the file again
                     cQ6_s = 0;
 
@@ -147,7 +150,7 @@ public class UnitProject {
 
                         if (c == 'A') {
                             aCounter++;
-                        } 
+                        }
                         else if (c == 'B') {
                             bCounter++;
                         }
@@ -159,7 +162,9 @@ public class UnitProject {
                         }
                     }
 
-                    JOptionPane.showMessageDialog(null, "Statistics for question 6 - " + "\n" + "Number of students who Strongly Agree (A): " + aCounter + "\n" + "Number of students who Agree (B): " + bCounter + "\n" + "Number of students who Disagree (C): " + cCounter + "\n" + "Number of students who Strongly Disagree (D): " + dCounter);
+                    JOptionPane.showMessageDialog(null, "Statistics for question 6 - " + "\n" + "Number of students who Strongly Agree (A): "
+                            + aCounter + "\n" + "Number of students who Agree (B): " + bCounter + "\n" + "Number of students who Disagree (C): "
+                            + cCounter + "\n" + "Number of students who Strongly Disagree (D): " + dCounter);
                     JOptionPane.showMessageDialog(null, "Thank you for running this survey! Please enjoy this complimentary chocolate bar!");
                     frame6_s.setVisible(false);
                     br6_s.close();
@@ -181,7 +186,6 @@ public class UnitProject {
         frame1_t.setSize(600, 150);
         frame1_t.setLocation(430, 100);
         // sets frame
-
 
         JPanel panel1_t = new JPanel();
         panel1_t.setLayout(new BoxLayout(panel1_t, BoxLayout.Y_AXIS));
@@ -219,7 +223,7 @@ public class UnitProject {
                 }
 
                 try {
-                    File f1_t = new File("C:\\Users\\salma\\Desktop\\Java Files\\Unit Project\\qn_1_teacher.txt");
+                    File f1_t = new File(dir + "qn_1_teacher.txt");
                     Scanner s1_t = new Scanner(f1_t);
                     FileReader fr1_t = new FileReader(f1_t);
                     BufferedReader br1_t = new BufferedReader(fr1_t);
@@ -233,7 +237,7 @@ public class UnitProject {
 
                         if (c == 'Y') {
                             yesCounter++;
-                        } 
+                        }
                         else if (c == 'N') {
                             noCounter++;
                         }
@@ -243,7 +247,7 @@ public class UnitProject {
                         FileWriter fw1_t = new FileWriter(f1_t, true);
                         fw1_t.write("Y ");
                         fw1_t.close();
-                    } 
+                    }
                     else if (yesCounter > 0 || noCounter > 0 && yesBox) {
                         // Appending text to the file
                         PrintWriter pw1_t = new PrintWriter(new FileWriter(f1_t, true));
@@ -259,12 +263,14 @@ public class UnitProject {
 
                         if (c == 'Y') {
                             yesCounter++;
-                        } else if (c == 'N') {
+                        }
+                        else if (c == 'N') {
                             noCounter++;
                         }
                     }
 
-                    JOptionPane.showMessageDialog(null, "Statistics for question 1 - " + "\n" + "Number of teachers who said Yes: " + yesCounter + "\n" + "Number of teachers who said No: " + noCounter);
+                    JOptionPane.showMessageDialog(null, "Statistics for question 1 - " + "\n" + "Number of teachers who said Yes: " + yesCounter
+                            + "\n" + "Number of teachers who said No: " + noCounter);
                     frame1_t.setVisible(false);
                     br1_t.close();
                     s1_t.close();
@@ -288,7 +294,7 @@ public class UnitProject {
                 }
 
                 try {
-                    File f1_t = new File("C:\\Users\\salma\\Desktop\\Java Files\\Unit Project\\qn_1_teacher.txt");
+                    File f1_t = new File(dir + "qn_1_teacher.txt");
                     Scanner s1_t = new Scanner(f1_t);
                     FileReader fr1_t = new FileReader(f1_t);
                     BufferedReader br1_t = new BufferedReader(fr1_t);
@@ -302,25 +308,25 @@ public class UnitProject {
 
                         if (c == 'Y') {
                             yesCounter++;
-                        } 
+                        }
                         else if (c == 'N') {
                             noCounter++;
                         }
-                    } 
+                    }
 
                     if (yesCounter == 0 && noCounter == 0 && noBox) {
                         // Writing text to the file
                         FileWriter fw1_t = new FileWriter(f1_t, true);
                         fw1_t.write("N ");
                         fw1_t.close();
-                    } 
+                    }
                     else if (yesCounter > 0 || noCounter > 0 && noBox) {
                         // Appending text to the file
                         PrintWriter pw1_t = new PrintWriter(new FileWriter(f1_t, true));
                         pw1_t.print("N ");
                         pw1_t.close();
                     }
-                    
+
                     // Reading the file again
                     cQ1_t = 0;
 
@@ -329,12 +335,14 @@ public class UnitProject {
 
                         if (c == 'Y') {
                             yesCounter++;
-                        } else if (c == 'N') {
+                        }
+                        else if (c == 'N') {
                             noCounter++;
                         }
                     }
 
-                    JOptionPane.showMessageDialog(null, "Statistics for question 1 - " + "\n" + "Number of teachers who said Yes: " + yesCounter + "\n" + "Number of teachers who said No: " + noCounter);
+                    JOptionPane.showMessageDialog(null, "Statistics for question 1 - " + "\n" + "Number of teachers who said Yes: " + yesCounter
+                            + "\n" + "Number of teachers who said No: " + noCounter);
                     frame1_t.setVisible(false);
                     br1_t.close();
                     s1_t.close();
@@ -394,7 +402,7 @@ public class UnitProject {
                 }
 
                 try {
-                    File f2_t = new File("C:\\Users\\salma\\Desktop\\Java Files\\Unit Project\\qn_2_teacher.txt");
+                    File f2_t = new File(dir + "qn_2_teacher.txt");
                     Scanner s2_t = new Scanner(f2_t);
                     FileReader fr2_t = new FileReader(f2_t);
                     BufferedReader br2_t = new BufferedReader(fr2_t);
@@ -408,23 +416,24 @@ public class UnitProject {
 
                         if (c == 'Y') {
                             yesCounter++;
-                        } 
+                        }
                         else if (c == 'N') {
                             noCounter++;
                         }
-                    } 
+                    }
                     if (yesCounter == 0 && noCounter == 0 && yesBox) {
                         // Writing text to the file
                         FileWriter fw2_t = new FileWriter(f2_t, true);
                         fw2_t.write("Y ");
                         fw2_t.close();
-                    } else if (yesCounter > 0 || noCounter > 0 && yesBox) {
+                    }
+                    else if (yesCounter > 0 || noCounter > 0 && yesBox) {
                         // Appending text to the file
                         PrintWriter pw2_t = new PrintWriter(new FileWriter(f2_t, true));
                         pw2_t.print("Y ");
                         pw2_t.close();
                     }
-                    
+
                     // Reading the file again
                     cQ1_t = 0;
 
@@ -433,12 +442,14 @@ public class UnitProject {
 
                         if (c == 'Y') {
                             yesCounter++;
-                        } else if (c == 'N') {
+                        }
+                        else if (c == 'N') {
                             noCounter++;
                         }
                     }
 
-                    JOptionPane.showMessageDialog(null, "Statistics for question 2 - " + "\n" + "Number of teachers who said Yes: " + yesCounter + "\n" + "Number of teachers who said No: " + noCounter);
+                    JOptionPane.showMessageDialog(null, "Statistics for question 2 - " + "\n" + "Number of teachers who said Yes: " + yesCounter
+                            + "\n" + "Number of teachers who said No: " + noCounter);
                     frame2_t.setVisible(false);
                     br2_t.close();
                     s2_t.close();
@@ -463,8 +474,7 @@ public class UnitProject {
                 }
 
                 try {
-                    File f2_t = new File(
-                            "C:\\Users\\salma\\Desktop\\Java Files\\Unit Project\\qn_2_teacher.txt");
+                    File f2_t = new File(dir + "qn_2_teacher.txt");
                     Scanner s2_t = new Scanner(f2_t);
                     FileReader fr2_t = new FileReader(f2_t);
                     BufferedReader br2_t = new BufferedReader(fr2_t);
@@ -478,24 +488,24 @@ public class UnitProject {
 
                         if (c == 'Y') {
                             yesCounter++;
-                        } 
+                        }
                         else if (c == 'N') {
                             noCounter++;
                         }
-                    } 
+                    }
                     if (yesCounter == 0 && noCounter == 0 && noBox) {
                         // Writing text to the file
                         FileWriter fw2_t = new FileWriter(f2_t, true);
                         fw2_t.write("N ");
                         fw2_t.close();
-                    } 
+                    }
                     else if (yesCounter > 0 || noCounter > 0 && noBox) {
                         // Appending text to the file
                         PrintWriter pw2_t = new PrintWriter(new FileWriter(f2_t, true));
                         pw2_t.print("N ");
                         pw2_t.close();
                     }
-                    
+
                     // Reading the file again
                     cQ1_t = 0;
 
@@ -504,12 +514,13 @@ public class UnitProject {
 
                         if (c == 'Y') {
                             yesCounter++;
-                        } else if (c == 'N') {
+                        }else if (c == 'N') {
                             noCounter++;
                         }
                     }
-                    
-                    JOptionPane.showMessageDialog(null, "Statistics for question 2 - " + "\n" + "Number of teachers who said Yes: " + yesCounter + "\n" + "Number of teachers who said No: " + noCounter);
+
+                    JOptionPane.showMessageDialog(null, "Statistics for question 2 - " + "\n" + "Number of teachers who said Yes: " + yesCounter
+                            + "\n" + "Number of teachers who said No: " + noCounter);
                     frame2_t.setVisible(false);
                     br2_t.close();
                     s2_t.close();
@@ -540,7 +551,7 @@ public class UnitProject {
         JLabel label3_t = new JLabel("If not, what can be changed about the curriculum to make it better?");
         label3_t.setAlignmentX(Component.CENTER_ALIGNMENT);
         panel3_t.add(label3_t);
-        // sets and adds label to panel 
+        // sets and adds label to panel
 
         JTextField field3_t = new JTextField("Enter your comments", 16);
         panel3_t.add(field3_t);
@@ -557,7 +568,7 @@ public class UnitProject {
         button3_t.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e2) {
                 try {
-                    FileWriter fw3_t = new FileWriter("C:\\Users\\salma\\Desktop\\Java Files\\Unit Project\\qn_3_teacher.txt", true);
+                    FileWriter fw3_t = new FileWriter(dir + "qn_3_teacher.txt", true);
                     PrintWriter pw3_t = new PrintWriter(fw3_t);
 
                     pw3_t.println(field3_t.getText());

@@ -1,8 +1,4 @@
-// This question was done by Salman Husainie
-/*
-questionFour.java
-*/
-
+// This question was completed by Salman.
 import javax.swing.*;
 import javax.swing.event.*;
 import java.io.*;
@@ -10,20 +6,16 @@ import java.util.*;
 import java.awt.HeadlessException;
 import java.awt.event.*;
 
-public class questionFour extends JFrame {
 
-    /**
-     *
-     */
+public class questionFour extends JFrame {
     private static final long serialVersionUID = 1L;
 
     public questionFour() throws FileNotFoundException {
         try {
             JSlider sliderQ4;
-            File myObjQ4 = new File("C:\\Users\\salma\\Desktop\\Java Files\\Unit Project\\QuestionFourData.txt");
+            File myObjQ4 = new File(dir + "qn_4_student.txt");
             // Reading the file
             Scanner fileQ4 = new Scanner(myObjQ4);
-           
 
             JFrame guiQ4 = new JFrame();
             guiQ4.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -93,7 +85,7 @@ public class questionFour extends JFrame {
                         String text = textFieldQ4.getText();
                         int value = Integer.parseInt(text);
                         File myObj = new File(
-                                "C:\\Users\\salma\\Desktop\\Java Files\\Unit Project\\QuestionFourData.txt");
+                                "qn_4_student.txt");
                         Scanner file = new Scanner(myObj);
                         int[] ranges = new int[5];
                         FileReader fr = new FileReader(myObjQ4); // Creation of FileReader object
@@ -101,7 +93,7 @@ public class questionFour extends JFrame {
                         for (int i = 0; i < 5; i++) {
                             ranges[i] = fileQ4.nextInt();
                         }
-                        //Adding 1 to appropriate range and writing the new values to the file
+                        // Adding 1 to appropriate range and writing the new values to the file
                         try {
                             FileWriter writer = new FileWriter(myObjQ4);
                             if (value < 50) {
@@ -110,14 +102,14 @@ public class questionFour extends JFrame {
                                     writer.write(ranges[i] + " ");
                                 }
                                 writer.close();
-                            } 
+                            }
                             else if (value >= 50 && value < 60) {
                                 ranges[1]++;
                                 for (int i = 0; i < 5; i++) {
                                     writer.write(ranges[i] + " ");
                                 }
                                 writer.close();
-                            } 
+                            }
                             else if (value >= 60 && value < 70) {
                                 ranges[2]++;
                                 for (int i = 0; i < 5; i++) {
@@ -131,7 +123,7 @@ public class questionFour extends JFrame {
                                     writer.write(ranges[i] + " ");
                                 }
                                 writer.close();
-                            } 
+                            }
                             else if (value >= 80 && value <= 100) {
                                 ranges[4]++;
                                 for (int i = 0; i < 5; i++) {
@@ -145,37 +137,35 @@ public class questionFour extends JFrame {
                         }
                         System.out.println("Saved");
                         guiQ4.setVisible(false);
-                        //Statistic display for this question
-                        JOptionPane.showMessageDialog(null, "~~Statistics For Math Marks~~" + "\n" + "Below 50: " + ranges[0] + "\n" 
-                                                     + "50-59: " + ranges[1] + "\n" + "60-69: " + ranges[2] + "\n" + "70-79: " + ranges[3]
-                                                     + "\n" + "80-100: " + ranges[4]);
+                        // Statistic display for this question
+                        JOptionPane.showMessageDialog(null, "~~Statistics For Math Marks~~" + "\n" + "Below 50: " + ranges[0] + "\n"
+                                + "50-59: " + ranges[1] + "\n" + "60-69: " + ranges[2] + "\n" + "70-79: " + ranges[3]
+                                + "\n" + "80-100: " + ranges[4]);
 
                         try {
-                        KalQuestions.runQuestions();
-    
-                    } catch (HeadlessException e1) {
-                        e1.printStackTrace();
-                    } catch (IOException e1) {
-                        e1.printStackTrace();
-                    }
+                            KalQuestions.runQuestions();
+                        } catch (HeadlessException e1) {
+                            e1.printStackTrace();
+                        } catch (IOException e1) {
+                            e1.printStackTrace();
+                        }
                     } catch (FileNotFoundException ext) {
                         ext.printStackTrace();
                     }
                 }
-
             });
         } catch (Exception e) {
             e.printStackTrace();
         }
-        
     }
 
+    public static void main(String[] args) {
+        dir = "C:\\Users\\salma\\Desktop\\Java Files\\Unit Project\\";
 
-    public static void main(String[]args) {
         try {
             new questionFour();
         } catch (FileNotFoundException fim) {
-             fim.printStackTrace();
+            fim.printStackTrace();
         }
     }
 }
