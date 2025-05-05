@@ -5,9 +5,9 @@ import java.io.*;
 
 
 public class GenderQuestionLav {
-    public static void main(String[] args) {
-        dir = "H:\\Documents - Copy\\GitHub\\survey_GUI\\data\\";
+    public static String dir = "H:\\Documents - Copy\\GitHub\\survey_GUI\\data\\";
 
+    public static void main(String[] args) {
         GenderQuestionMultipleChoice();
     }
 
@@ -96,7 +96,7 @@ public class GenderQuestionLav {
 
                 frame.setVisible(false);
                 try {
-                    new questionFour();
+                    new FourthQuestion();
                 } catch (FileNotFoundException e1) {
                     e1.printStackTrace();
                 }

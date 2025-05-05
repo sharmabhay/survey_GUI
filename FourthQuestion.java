@@ -9,8 +9,9 @@ import java.awt.event.*;
 
 public class FourthQuestion extends JFrame {
     private static final long serialVersionUID = 1L;
+    public static String dir = "H:\\Documents - Copy\\GitHub\\survey_GUI\\data\\";
 
-    public questionFour() throws FileNotFoundException {
+    public FourthQuestion() throws FileNotFoundException {
         try {
             JSlider sliderQ4;
             File myObjQ4 = new File(dir + "qn_4_student.txt");
@@ -160,10 +161,8 @@ public class FourthQuestion extends JFrame {
     }
 
     public static void main(String[] args) {
-        dir = "H:\\Documents - Copy\\GitHub\\survey_GUI\\data\\";
-
         try {
-            new questionFour();
+            new FourthQuestion();
         } catch (FileNotFoundException fim) {
             fim.printStackTrace();
         }

@@ -8,6 +8,11 @@ import java.io.*; // Imports the necessary classes like IOException, FileReader,
 public class Survey extends JFrame {
     public static void main(String[] args) throws HeadlessException, IOException {
         Scanner in = new Scanner(System.in);
-        new questionOne();
+        new FirstQuestion();
+        // new GenderQuestionLav();
+        // new GradeLevelQuestion();
+        // new FourthQuestion();
+        // new JavaProjectQuestions();
+        // new KalQuestions();
     }
 }

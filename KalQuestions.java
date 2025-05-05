@@ -10,11 +10,10 @@ import java.io.PrintWriter;
 
 
 public class KalQuestions {
+    public static String dir = "H:\\Documents - Copy\\GitHub\\survey_GUI\\data\\";
     static int q8no;
 
     public static void main(String[] args) throws IOException {
-        dir = "H:\\Documents - Copy\\GitHub\\survey_GUI\\data\\";
-
         runQuestions(); // method to run questions
     }
 
@@ -23,7 +22,7 @@ public class KalQuestions {
     File file2 = new File(dir + "qn_8_student.txt"); // import file for question 2 yes/no
     File file3 = new File(dir + "qn_9_student.txt"); // import file for question 2 response
 
-    if (file.createNewFile()) {
+    if (file1.createNewFile()) {
         try {
             FileWriter fw1 = new FileWriter(file1,true);
             FileWriter fw2 = new FileWriter(file2,true);
@@ -143,7 +142,7 @@ public class KalQuestions {
 
         JOptionPane.showMessageDialog(null,"~~Statistics For This Question~~" + " \n" + "# of Students who answered Yes: " + q8yes
                 + " \n" + "# of Students who answered No: " + q8no);
-        UnitProject.question6_Student();
+        JavaProjectQuestions.question6_Student();
 
         return q8no;
     }

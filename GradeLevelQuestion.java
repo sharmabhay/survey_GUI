@@ -9,10 +9,9 @@ import java.awt.color.*;
 
 
 public class GradeLevelQuestion {
-    public static void main(String[] args) {
-        dir = "H:\\Documents - Copy\\GitHub\\survey_GUI\\data\\";
-        H:\Documents - Copy\GitHub\survey_GUI
+    public static String dir = "H:\\Documents - Copy\\GitHub\\survey_GUI\\data\\";
 
+    public static void main(String[] args) {
         GradeLevels();
     }
 

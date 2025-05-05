@@ -7,9 +7,9 @@ import java.util.Scanner;
 
 
 public class JavaProjectQuestions {
-    public static void main(String[] args) throws java.io.FileNotFoundException {
-        dir = "H:\\Documents - Copy\\GitHub\\survey_GUI\\data\\";
+    public static String dir = "H:\\Documents - Copy\\GitHub\\survey_GUI\\data\\";
 
+    public static void main(String[] args) throws java.io.FileNotFoundException {
         question1_Teacher();
         question6_Student();
     }

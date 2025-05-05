@@ -7,8 +7,9 @@ import java.io.*; // Imports the necessary classes like IOException, FileReader,
 
 public class FirstQuestion extends JFrame {
     private static final long serialVersionUID = 1L;
+    public static String dir = "H:\\Documents - Copy\\GitHub\\survey_GUI\\data\\";
 
-    public questionOne() {
+    public FirstQuestion() {
         frame();
     }
 
@@ -144,7 +145,7 @@ public class FirstQuestion extends JFrame {
                     frameQ1.setVisible(false);
                     JOptionPane.showMessageDialog(null, studentCounterQ1 + " students and " + teacherCounterQ1
                             + " teachers have been surveyed so far.");
-                    UnitProject.question1_Teacher();
+                    JavaProjectQuestions.question1_Teacher();
                     br.close();
                     file.close();
                 } catch (IOException t) {
@@ -176,10 +177,8 @@ public class FirstQuestion extends JFrame {
     public static void main(String[] args) throws java.io.FileNotFoundException {
         Scanner in = new Scanner(System.in);
 
-        dir = "H:\\Documents - Copy\\GitHub\\survey_GUI\\data\\";
-
         // Calls the constructor
-        new questionOne();
+        new FirstQuestion();
 
         // Closes the scanner
         in.close();
