@@ -7,7 +7,7 @@ import java.awt.HeadlessException;
 import java.awt.event.*;
 
 
-public class QuestionFour extends JFrame {
+public class FourthQuestion extends JFrame {
     private static final long serialVersionUID = 1L;
 
     public questionFour() throws FileNotFoundException {
